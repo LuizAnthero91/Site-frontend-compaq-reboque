@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { WhatsappFloatComponent } from './components/whatsapp-float/whatsapp-float.component';
+import { SeoService } from './shared/seo.service';
 
 @Component({
   selector: 'app-root',
@@ -17,4 +18,8 @@ import { WhatsappFloatComponent } from './components/whatsapp-float/whatsapp-flo
     <app-whatsapp-float></app-whatsapp-float>
   `
 })
-export class AppComponent {}
+export class AppComponent {
+  constructor(seo: SeoService) {
+    seo.initialize();
+  }
+}
