@@ -1,0 +1,9 @@
+.copy-card,
+.form-card { padding: 1.6rem; }
+.bullets { display: grid; gap: .8rem; margin-top: 1.2rem; }
+.bullets li::before {
+  content: '✓';
+  color: var(--primary-dark);
+  margin-right: .6rem;
+}
+.form-card { display: grid; gap: 1rem; }

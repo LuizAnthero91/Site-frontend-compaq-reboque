@@ -1,0 +1,62 @@
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Orçamentos</span>
+    <h1 class="title-lg">Solicite um orçamento rápido via WhatsApp</h1>
+    <p class="lead">Você será redirecionado para o WhatsApp com a mensagem pré-preenchida.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid-2">
+    <form class="surface-card form-card" [formGroup]="form" (ngSubmit)="submit()">
+      <div class="form-field">
+        <label for="nome">Nome completo</label>
+        <input id="nome" type="text" formControlName="nome">
+      </div>
+
+      <div class="form-field">
+        <label for="telefone">Telefone / WhatsApp</label>
+        <input id="telefone" type="text" formControlName="telefone">
+      </div>
+
+      <div class="form-field">
+        <label for="servico">Tipo de serviço</label>
+        <select id="servico" formControlName="servico">
+          <option value="">Selecione o serviço</option>
+          <option>Reboque Leve (Carro/Moto)</option>
+          <option>Reboque Pesado (Caminhão/Ônibus)</option>
+          <option>Assistência/Outro</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="origem">Local de origem (Cidade/Bairro)</label>
+        <input id="origem" type="text" formControlName="origem">
+      </div>
+
+      <div class="form-field full">
+        <label for="detalhes">Detalhes adicionais (Tipo de veículo, destino, etc.)</label>
+        <textarea id="detalhes" formControlName="detalhes"></textarea>
+      </div>
+
+      <button class="btn btn-primary" type="submit">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="icon-sm">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.973 1.235l-.356.192-3.68-.964.987 3.605-.235.374a9.86 9.86 0 001.271 4.818c1.138 1.827 2.748 3.236 4.664 4.102 1.245.627 2.738.947 4.27.947h1.201c3.024 0 5.487-2.464 5.487-5.49 0-1.459-.596-2.84-1.68-3.925-1.082-1.083-2.461-1.679-3.915-1.679h-.007z"/>
+        </svg>
+        Enviar orçamento pelo WhatsApp
+      </button>
+    </form>
+
+    <div class="surface-card info-card">
+      <h2 class="title-md">O que informar</h2>
+      <ul class="list-reset info-list">
+        <li>Tipo de veículo</li>
+        <li>Cidade ou bairro de origem</li>
+        <li>Destino, se houver</li>
+        <li>Se é reboque leve, pesado ou assistência</li>
+        <li>Telefone para retorno rápido</li>
+      </ul>
+      <p class="lead">Atendimento em Sarzedo-MG, Belo Horizonte-MG, Betim-MG e Contagem-MG.</p>
+    </div>
+  </div>
+</section>

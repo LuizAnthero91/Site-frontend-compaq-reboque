@@ -1,0 +1,103 @@
+.hero {
+  padding: 4rem 0 3rem;
+  background:
+    radial-gradient(circle at top right, rgba(93, 159, 241, .35), transparent 28%),
+    linear-gradient(180deg, #e8f0ff 0%, #f5f7fa 100%);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 2rem;
+  align-items: center;
+}
+.hero-copy { margin: 1.25rem 0 0; max-width: 700px; }
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.feature-pills {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.pill {
+  display: flex;
+  gap: .9rem;
+  padding: 1rem;
+  border-radius: 18px;
+  background: rgba(255,255,255,.85);
+  border: 1px solid var(--line);
+}
+.pill span { font-size: 1.2rem; }
+.pill strong { display: block; color: var(--ink); }
+.pill small { color: var(--muted); }
+.hero-card { overflow: hidden; }
+.hero-visual {
+  min-height: 340px;
+  background:
+    linear-gradient(135deg, rgba(0, 102, 255, .15), rgba(93, 159, 241, .25)),
+    url('/assets/img/compaqreboque.webp') center/cover;
+  position: relative;
+}
+.truck-tag { position: absolute; top: 1rem; right: 1rem; }
+.hero-card-content { padding: 1.5rem; display: grid; gap: 1rem; }
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.service-card { padding: 1.5rem; }
+.service-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: var(--surface-alt);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.service-card h3 { font-size: 1.5rem; margin-bottom: .75rem; }
+.preview-grid {
+  display: grid;
+  grid-template-columns: .95fr 1.05fr;
+  gap: 2rem;
+  align-items: center;
+}
+.photo-card {
+  min-height: 420px;
+  background:
+    linear-gradient(180deg, rgba(0, 102, 255, .12), rgba(0, 0, 0, .18)),
+    url('https://images.unsplash.com/photo-1609336424537-ec94c9c0d5ed?auto=format&fit=crop&w=1200&q=80') center/cover;
+}
+.feature-list {
+  display: grid;
+  gap: .8rem;
+  margin: 1.5rem 0 2rem;
+}
+.feature-list li::before {
+  content: '✓';
+  margin-right: .6rem;
+  color: var(--primary-dark);
+  font-weight: 700;
+}
+.cta-box {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  background: linear-gradient(90deg, #e8f0ff 0%, #f5f7fa 100%);
+}
+
+@media (max-width: 980px) {
+  .hero-grid,
+  .preview-grid,
+  .section-head { grid-template-columns: 1fr; display: grid; }
+  .feature-pills { grid-template-columns: 1fr; }
+  .cta-box { flex-direction: column; align-items: flex-start; }
+}

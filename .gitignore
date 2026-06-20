@@ -1,0 +1,31 @@
+# Dependencies
+/node_modules
+
+# Angular build output and cache
+/dist
+/.angular
+/out-tsc
+
+# Local environment files (keep examples versioned)
+.env
+.env.*
+!.env.example
+
+# Logs and test output
+*.log
+/coverage
+/.nyc_output
+
+# IDE and operating-system files
+/.idea
+/.vscode/*
+!/.vscode/extensions.json
+!/.vscode/launch.json
+!/.vscode/tasks.json
+!/.vscode/settings.json
+.DS_Store
+Thumbs.db
+
+# Local deployment metadata
+/.vercel
+

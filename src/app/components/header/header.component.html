@@ -1,0 +1,25 @@
+<header class="header">
+  <div class="container inner">
+    <a routerLink="/" class="brand" (click)="closeMenu()">
+      <span class="brand-mark">C</span>
+      <span>
+        <strong>COMPAQ</strong>
+        <small>AUTO REBOQUE</small>
+      </span>
+    </a>
+
+    <button class="menu-button" type="button" (click)="toggleMenu()">☰</button>
+
+    <nav class="nav" [class.open]="isOpen">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Início</a>
+      <a routerLink="/sobre-nos" routerLinkActive="active" (click)="closeMenu()">Sobre nós</a>
+      <a routerLink="/trabalhe-conosco" routerLinkActive="active" (click)="closeMenu()">Trabalhe conosco</a>
+      <a routerLink="/orcamentos" routerLinkActive="active" (click)="closeMenu()">Orçamentos</a>
+      <a routerLink="/contato" routerLinkActive="active" (click)="closeMenu()">Contato</a>
+    </nav>
+
+    <a class="btn btn-outline cta-phone" [href]="data.whatsappBase" target="_blank" rel="noopener">
+      ☎ {{ data.phoneDisplay }}
+    </a>
+  </div>
+</header>

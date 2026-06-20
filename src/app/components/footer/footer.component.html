@@ -1,0 +1,58 @@
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="brand-row">
+        <span class="brand-mark">C</span>
+        <div>
+          <strong>COMPAQ</strong>
+          <small>AUTO REBOQUE</small>
+        </div>
+      </div>
+      <p class="footer-copy">{{ data.aboutText }}</p>
+      <div class="social-links">
+        <a [href]="data.socialLinks.whatsapp" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp">
+          <img src="/assets/img/whatsapp-icon.svg" class="social-img" alt="WhatsApp">
+        </a>
+        <a [href]="data.socialLinks.instagram" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+          <img src="/assets/img/instagram-icon.svg" class="social-img" alt="Instagram">
+        </a>
+        <a [href]="data.socialLinks.phone" title="Ligar" aria-label="Ligar">
+          <img src="/assets/img/phone-icon.svg" class="social-img" alt="Telefone">
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <h4>Navegação</h4>
+      <ul class="list-reset links">
+        <li><a routerLink="/">Início</a></li>
+        <li><a routerLink="/sobre-nos">Sobre nós</a></li>
+        <li><a routerLink="/trabalhe-conosco">Trabalhe conosco</a></li>
+        <li><a routerLink="/orcamentos">Orçamentos</a></li>
+        <li><a routerLink="/contato">Contato</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Atendemos</h4>
+      <ul class="list-reset links">
+        @for (item of data.serviceRegions; track item) {
+          <li>{{ item }}</li>
+        }
+      </ul>
+    </div>
+
+    <div>
+      <h4>Contato 24h</h4>
+      <ul class="list-reset links">
+        <li>{{ data.phoneDisplay }}</li>
+        <li>{{ data.city }}</li>
+        <li>{{ data.serviceAreas }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container bottom">
+    <span>{{ data.footerNote }}</span>
+  </div>
+</footer>

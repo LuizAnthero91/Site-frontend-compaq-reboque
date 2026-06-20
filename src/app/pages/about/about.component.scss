@@ -1,0 +1,12 @@
+.card { padding: 1.8rem; }
+.photo {
+  min-height: 360px;
+  background:
+    linear-gradient(180deg, rgba(0, 102, 255, .12), rgba(0, 0, 0, .2)),
+    url('/assets/img/compaqreboque.webp') center/cover;
+}
+.list-points { display: grid; gap: 1rem; margin-top: 1.5rem; }
+.alt { background: var(--surface-alt); }
+.mini-card { padding: 1.4rem; }
+.icon { font-size: 1.6rem; }
+.mini-card h3 { font-size: 1.25rem; margin: .85rem 0 .5rem; }

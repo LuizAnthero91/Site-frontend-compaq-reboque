@@ -1,0 +1,103 @@
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Guincho 24h</span>
+      <h1 class="title-xl">Seu reboque leve e pesado em <span class="text-primary">Sarzedo-MG</span></h1>
+      <p class="lead hero-copy">{{ data.heroSubtitle }}</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" [href]="data.whatsappBase" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="icon-sm">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.973 1.235l-.356.192-3.68-.964.987 3.605-.235.374a9.86 9.86 0 001.271 4.818c1.138 1.827 2.748 3.236 4.664 4.102 1.245.627 2.738.947 4.27.947h1.201c3.024 0 5.487-2.464 5.487-5.49 0-1.459-.596-2.84-1.68-3.925-1.082-1.083-2.461-1.679-3.915-1.679h-.007z"/>
+          </svg>
+          {{ data.whatsappCta }}
+        </a>
+        <a class="btn btn-outline" routerLink="/sobre-nos">Conheça a empresa</a>
+      </div>
+
+      <div class="feature-pills">
+        @for (item of data.features; track item.title) {
+          <div class="pill">
+            <span>{{ item.icon }}</span>
+            <div>
+              <strong>{{ item.title }}</strong>
+              <small>{{ item.description }}</small>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="hero-card surface-card">
+      <div class="hero-visual">
+        <div class="truck-tag badge">Atendimento 24h</div>
+      </div>
+      <div class="hero-card-content">
+        <h2 class="title-md">Orçamento rápido pelo WhatsApp</h2>
+        <p>Preencha os dados na página de orçamentos e envie a mensagem pronta para agilizar o atendimento.</p>
+        <a routerLink="/orcamentos" class="btn btn-dark">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="icon-sm">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.973 1.235l-.356.192-3.68-.964.987 3.605-.235.374a9.86 9.86 0 001.271 4.818c1.138 1.827 2.748 3.236 4.664 4.102 1.245.627 2.738.947 4.27.947h1.201c3.024 0 5.487-2.464 5.487-5.49 0-1.459-.596-2.84-1.68-3.925-1.082-1.083-2.461-1.679-3.915-1.679h-.007z"/>
+          </svg>
+          Solicitar orçamento
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-services">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Serviços</span>
+        <h2 class="title-lg">Soluções completas para você e seu veículo.</h2>
+      </div>
+      <p class="lead">{{ data.serviceIntro }}</p>
+    </div>
+
+    <div class="grid-3">
+      @for (service of data.services; track service.title) {
+        <article class="service-card surface-card">
+          <div class="service-icon">{{ service.icon }}</div>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.description }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section section-about-preview">
+  <div class="container preview-grid">
+    <div class="photo-card surface-card"></div>
+    <div>
+      <span class="eyebrow">Sobre nós</span>
+      <h2 class="title-lg">Compromisso que te leva mais longe.</h2>
+      <p class="lead">{{ data.aboutText }}</p>
+      <ul class="list-reset feature-list">
+        <li>Profissionais experientes</li>
+        <li>Atendimento ágil e transparente</li>
+        <li>Foco em segurança e confiança</li>
+        <li>Cobertura em Sarzedo, BH, Betim e Contagem</li>
+      </ul>
+      <a routerLink="/sobre-nos" class="btn btn-outline">Saiba mais</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container cta-box surface-card">
+    <div>
+      <span class="eyebrow">Precisando de reboque agora?</span>
+      <h2 class="title-md">Fale com a Compaq Reboque.</h2>
+      <p class="lead">Atendimento rápido via WhatsApp com mensagem pré-preenchida.</p>
+    </div>
+    <a class="btn btn-whatsapp" [href]="data.whatsappBase" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" class="icon-sm">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-4.973 1.235l-.356.192-3.68-.964.987 3.605-.235.374a9.86 9.86 0 001.271 4.818c1.138 1.827 2.748 3.236 4.664 4.102 1.245.627 2.738.947 4.27.947h1.201c3.024 0 5.487-2.464 5.487-5.49 0-1.459-.596-2.84-1.68-3.925-1.082-1.083-2.461-1.679-3.915-1.679h-.007z"/>
+      </svg>
+      Chamar no WhatsApp
+    </a>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow">Sobre nós</span>
+    <h1 class="title-lg">Compaq Reboque</h1>
+    <p class="lead">{{ data.aboutText }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid-2">
+    <div class="surface-card card photo"></div>
+    <div class="surface-card card">
+      <h2 class="title-md">O que fazemos</h2>
+      <p>{{ data.serviceIntro }}</p>
+      <ul class="list-reset list-points">
+        @for (service of data.services; track service.title) {
+          <li><strong>{{ service.title }}:</strong> {{ service.description }}</li>
+        }
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <div class="grid-4">
+      @for (item of data.features; track item.title) {
+        <article class="surface-card mini-card">
+          <span class="icon">{{ item.icon }}</span>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>

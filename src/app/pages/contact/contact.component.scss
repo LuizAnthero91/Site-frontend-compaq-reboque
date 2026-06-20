@@ -1,0 +1,11 @@
+.contact-stack { display: grid; gap: 1rem; }
+.info-box,
+.contact-card { padding: 1.6rem; }
+.info-box h2 { font-size: 1.2rem; margin-bottom: .8rem; }
+.region-list { display: grid; gap: .6rem; margin-top: .75rem; }
+.contact-card {
+  display: grid;
+  align-content: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, #e8f0ff 0%, #ffffff 100%);
+}

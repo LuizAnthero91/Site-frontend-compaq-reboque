@@ -1,0 +1,17 @@
+.form-card,
+.info-card { padding: 1.6rem; }
+.form-card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.full { grid-column: 1 / -1; }
+.info-list { display: grid; gap: .85rem; margin: 1.25rem 0 1.5rem; }
+.info-list li::before {
+  content: '•';
+  color: var(--primary-dark);
+  margin-right: .6rem;
+}
+@media (max-width: 980px) {
+  .form-card { grid-template-columns: 1fr; }
+}
