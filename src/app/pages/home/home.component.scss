@@ -64,15 +64,7 @@
 .service-card h3 { font-size: 1.5rem; margin-bottom: .75rem; }
 .preview-grid {
   display: grid;
-  grid-template-columns: .95fr 1.05fr;
-  gap: 2rem;
-  align-items: center;
-}
-.photo-card {
-  min-height: 420px;
-  background:
-    linear-gradient(180deg, rgba(0, 102, 255, .12), rgba(0, 0, 0, .18)),
-    url('https://images.unsplash.com/photo-1609336424537-ec94c9c0d5ed?auto=format&fit=crop&w=1200&q=80') center/cover;
+  grid-template-columns: 1fr;
 }
 .feature-list {
   display: grid;
