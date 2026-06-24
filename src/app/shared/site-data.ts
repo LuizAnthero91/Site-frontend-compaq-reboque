@@ -1,13 +1,11 @@
 export interface ServiceItem {
   title: string;
   description: string;
-  icon: string;
 }
 
 export interface FeatureItem {
   title: string;
   description: string;
-  icon: string;
 }
 
 export const siteData = {
@@ -21,8 +19,7 @@ export const siteData = {
   whatsappCta: 'Peça um Orçamento Rápido',
   socialLinks: {
     whatsapp: 'https://wa.me/5531991437305',
-    instagram: 'https://www.instagram.com/reboquecontagemcompac/',
-    phone: 'tel:+5531991437305'
+    instagram: 'https://www.instagram.com/reboquecontagemcompac/'
   },
   serviceIntro: 'Nossos Serviços de Guincho para Carro, Moto, Caminhão, Ônibus:',
   serviceAreas: 'Atendendo toda a região com excelência.',
@@ -30,40 +27,33 @@ export const siteData = {
   services: [
     {
       title: 'Reboque Leve',
-      description: 'Carros, motos e veículos utilitários.',
-      icon: '🚗'
+      description: 'Carros, motos e veículos utilitários.'
     },
     {
       title: 'Reboque Pesado',
-      description: 'Caminhões, ônibus e máquinas.',
-      icon: '🚛'
+      description: 'Caminhões, ônibus e máquinas.'
     },
     {
       title: 'Assistência',
-      description: 'Socorro e remoção em geral.',
-      icon: '🛠️'
+      description: 'Socorro e remoção em geral.'
     }
   ] as ServiceItem[],
   features: [
     {
       title: 'Atendimento 24h',
-      description: 'Pronto para atender a qualquer hora do dia ou da noite.',
-      icon: '⏰'
+      description: 'Pronto para atender a qualquer hora do dia ou da noite.'
     },
     {
       title: 'Cobertura regional',
-      description: 'Atendimento em Sarzedo, Belo Horizonte, Betim e Contagem.',
-      icon: '📍'
+      description: 'Atendimento em Sarzedo, Belo Horizonte, Betim e Contagem.'
     },
     {
       title: 'Orçamento via WhatsApp',
-      description: 'Mensagem pré-preenchida para agilizar o primeiro contato.',
-      icon: '💬'
+      description: 'Mensagem pré-preenchida para agilizar o primeiro contato.'
     },
     {
       title: 'Leve e pesado',
-      description: 'Soluções para veículos leves, pesados e assistência geral.',
-      icon: '✅'
+      description: 'Soluções para veículos leves, pesados e assistência geral.'
     }
   ] as FeatureItem[],
   aboutText: 'A Compaq Reboque atua com serviço de reboque leve e pesado em Sarzedo-MG e região, oferecendo atendimento rápido, comunicação simples e foco total na segurança do veículo.',

@@ -96,10 +96,6 @@ button, input, textarea, select { font: inherit; }
   cursor: pointer;
 }
 .btn:hover { transform: translateY(-1px); }
-.icon-sm {
-  width: 20px;
-  height: 20px;
-}
 .btn-primary {
   background: var(--primary);
   color: white;

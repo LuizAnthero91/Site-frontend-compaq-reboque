@@ -29,17 +29,6 @@
   letter-spacing: .18em;
   font-size: .72rem;
 }
-.brand-mark {
-  width: 44px;
-  height: 44px;
-  border-radius: 14px;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(135deg, var(--primary), var(--accent));
-  color: white;
-  font-weight: 800;
-  box-shadow: var(--shadow);
-}
 .nav {
   display: flex;
   align-items: center;
